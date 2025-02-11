@@ -1,9 +1,9 @@
 #Mode Opératoire
 
 ##Prérequis et Installations :
-- **Git** : normalement disponible par défaut sur les machines de la DIN, sinon à installer à partir du centre logiciel en utilisant TotoiseGit.
+- **Git**
 
-- **Rancher Desktop** : à installer à partir du centre logiciel.
+- **Rancher Desktop** : à installer
 
 - **Terraform** : à télécharger à partir de [ce lien](https://developer.hashicorp.com/terraform/install#windows) (fichier binaire AMD64), puis créez une variable d'environnement avec le nom "Terraform" qui pointe vers le dossier décompressé.
 
@@ -14,13 +14,13 @@ Pour exécuter le projet en local sur Windows :
 ##Mise en place de l'environnement :
 1. Commencez par clone le repo pour obtenir les fichiers de configuration Terraform (.tf) en local sur votre machine.
 ```
-git clone https://DIN-SmartMobility@dev.azure.com/DIN-SmartMobility/ETM%20-%20Virtualisation/_git/ETM%20-%20Virtualisation
+git clone 
 ```
 2. Pour que Airflow détecte les fichiers DAGs à orchestrer, vous devez suivre les étapes suivantes :
 - Créer un repository git où vous allez mettre vous fichier DAGs,
 - Modifier le Helm Chart d'Airflow sous Terraform/modules/airflow/values.yaml, en indiquant le lien vers le repo git contenant les fichiers DAGs (ligne 2600, variable gitSync:repo). Par exemple :
 ```
-repo: https://dev.azure.com/DIN-SmartMobility/ETM%20-%20Virtualisation/_git/Airflow%20Test%20DAGs
+repo: 
 ```
 Pour plus d'informations sur ce fichier Helm Chart et sur le deploiment de Airflow sur Kubernetes en général, vous pouvez consulter [ce repo git](https://github.com/airflow-helm/charts/tree/main/charts/airflow).
 - Modifier le fichier terraform.tfvars en indiquant l'utilisateur Git du repo créé, ainsi que le token Git que vous devez créer en suivant [ces étapes](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).
