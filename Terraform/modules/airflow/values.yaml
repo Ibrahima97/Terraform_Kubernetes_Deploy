@@ -2597,7 +2597,7 @@ dags:
     # git repo clone url
     # ssh example: git@github.com:apache/airflow.git
     # https example: https://github.com/apache/airflow.git
-    repo: https://dev.azure.com/DIN-SmartMobility/ETM%20-%20Virtualisation/_git/Airflow%20Test%20DAGs
+    repo: https://github.com/Ibrahima97/Terraform_Kubernetes_Deploy.git
     branch: main
     rev: HEAD
     # The git revision (branch, tag, or hash) to check out, v4 only
